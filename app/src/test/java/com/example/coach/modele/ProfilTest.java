@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import java.util.Date;
+
 public class ProfilTest {
 
     @Test
@@ -17,7 +19,7 @@ public class ProfilTest {
     }
 
     // création d’un profil : femme de 67kg, 1m65, 35 ans
-    private Profil profil = new Profil(67, 165, 35, 0);
+    private Profil profil = new Profil(67, 165, 35, 0, new Date());
     // résultat de l’img correspondant
     private float img = (float)32.2 ;
     // message correspondant

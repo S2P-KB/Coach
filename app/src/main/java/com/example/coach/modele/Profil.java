@@ -3,6 +3,7 @@ package com.example.coach.modele;
 
 import com.example.coach.outils.Serializer;
 
+import java.util.Date;
 import java.util.Objects;
 
 public class Profil extends Serializer {
@@ -10,18 +11,22 @@ public class Profil extends Serializer {
     private static final Integer maxFemme = 30; // gros si au dessus
     private static final Integer minHomme = 10; // maigre si en dessous
     private static final Integer maxHomme = 25; // gros si au dessus
+
     private Integer poids;
     private Integer taille;
     private Integer age;
     private Integer sexe;
+
     private float imc = 0;
     private String message = "";
+    private Date dateMesure;
 
-    public Profil(Integer poids, Integer taille, Integer age, Integer sexe) {
+    public Profil(Integer poids, Integer taille, Integer age, Integer sexe, Date dateMesure) {
         this.poids = poids;
         this.taille = taille;
         this.age = age;
         this.sexe = sexe;
+        this.dateMesure = dateMesure;
     }
 
     public int getPoids() {
@@ -66,5 +71,9 @@ public class Profil extends Serializer {
             }
         }
         return message;
+    }
+
+    public Date getDateMesure(){
+        return dateMesure;
     }
 }
